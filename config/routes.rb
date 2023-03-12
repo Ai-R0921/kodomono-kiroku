@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'posts/new'
+  get 'posts/create'
+  get 'posts/index'
+  get 'posts/show'
+  get 'posts/edit'
+  get 'posts/update'
+  get 'posts/destroy'
+  get '/' => 'homes#top'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
