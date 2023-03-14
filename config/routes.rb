@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/my_page'
+  get 'users/edit'
+  get 'users/update'
+  get 'users/unsubscribe'
+  get 'users/withdraw'
   get 'posts/new'
   get 'posts/create'
   get 'posts/index'
