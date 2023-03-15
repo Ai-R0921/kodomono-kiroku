@@ -1,17 +1,11 @@
 Rails.application.routes.draw do
-  get 'users/my_page'
-  get 'users/edit'
-  get 'users/update'
-  get 'users/unsubscribe'
-  get 'users/withdraw'
-  get 'posts/new'
-  get 'posts/create'
-  get 'posts/index'
-  get 'posts/show'
-  get 'posts/edit'
-  get 'posts/update'
-  get 'posts/destroy'
   get '/' => 'homes#top'
+  get 'users/my_page'
+  get 'users/unsubscribe'
+  patch 'users/withdraw'
+  resources :users, only: [:edit, :update]
+  resources :posts
+
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
