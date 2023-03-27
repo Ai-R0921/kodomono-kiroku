@@ -4,6 +4,14 @@
       <h1>my page</h1>
     </div>
   </div>
+  <div class="row mt-5">
+    <h4>posts</h4>
+    <% @posts.each do |post| %>
+      <%= post.title %>
+      <%= post.body %>
+      <%= image_tag post.image, size: "200x200" %>
+    <% end %>
+  </div>
 </div>
 <%= link_to "edit", edit_user_path(current_user) %>
 <%= link_to "new post", new_post_path %>

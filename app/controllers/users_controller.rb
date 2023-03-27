@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def my_page
+    @posts = Post.all
   end
 
   def edit
