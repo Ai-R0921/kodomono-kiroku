@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/' => 'homes#top'
+  get 'about' => 'homes#about'
   get 'users/my_page'
   get 'users/unsubscribe'
   patch 'users/withdraw'

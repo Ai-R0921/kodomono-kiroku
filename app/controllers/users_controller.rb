@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def my_page
-    @posts = Post.all
+    @posts = Post.order('id DESC').limit(1)
   end
 
   def edit

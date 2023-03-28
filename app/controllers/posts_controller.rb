@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    user = current_user
+    @user = current_user
     post = Post.new(post_params)
     post.user_id = current_user.id
     post.save
@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def index
+    @posts = Post.all
   end
 
   def show
