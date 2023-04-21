@@ -4,4 +4,21 @@
       <h1>detail</h1>
     </div>
   </div>
+  <div class="row mt-5">
+    <div class="col text-center">
+      <% if @post.image.attached? %>
+        <%= image_tag @post.image, size: "200x200" %>
+      <% else %>
+        <%= image_tag "noimage", size: "200x200" %>
+      <% end %>
+        <%= @post.title %>
+        <%= @post.body %>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col text-center">
+      <%= link_to "back", users_my_page_path %>
+      <%= link_to "edit", edit_post_path %>
+    </div>
+  </div>
 </div>
