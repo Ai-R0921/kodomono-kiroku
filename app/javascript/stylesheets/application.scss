@@ -18,7 +18,7 @@ html {
 /* 背景用*/
 body {
   padding: 30px;
-  background: #eae83a;
+  background: #cdf0ea;
 }
 
 .btn,
@@ -74,4 +74,8 @@ a.btn-border-shadow:hover {
 a.btn-border-shadow:hover:before {
   top: 0;
   left: 0;
+}
+
+.navbox {
+  background-color: #fff;
 }
