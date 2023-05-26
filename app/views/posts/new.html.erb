@@ -1,20 +1,22 @@
 <div class="container">
-  <div class="row">
+  <div class="row mt-5">
     <div class="col text-center">
       <h1>new post</h1>
     </div>
   </div>
   <div class="row mt-5">
-    <%= form_with model: @post do |f| %>
-      <h4>title</h4>
-      <%= f.text_field :title %>
+    <div class="col-4 mx-auto">
+      <%= form_with model: @post do |f| %>
+        <h4>title</h4>
+        <%= f.text_field :title %>
 
-      <h4>body</h4>
-      <%= f.text_area :body %>
+        <h4>body</h4>
+        <%= f.text_area :body %>
 
-      <h4>image</h4>
-      <%= f.file_field :image, accept: "image/*" %>
-      <%= f.submit "post" %>
-    <% end %>
+        <h4>image</h4>
+        <%= f.file_field :image, accept: "image/*" %>
+        <%= f.submit "post" %>
+      <% end %>
+    </div>
   </div>
 </div>
